@@ -320,12 +320,7 @@ public class XmlUtils {
 		String originalSystemProperty = System.getProperty("javax.xml.transform.TransformerFactory");
 				
 		try {
-			System.setProperty("javax.xml.transform.TransformerFactory",
-					TRANSFORMER_FACTORY_PROCESSOR_XALAN);
-//					TRANSFORMER_FACTORY_SAXON);
-			
-			transformerFactory = javax.xml.transform.TransformerFactory
-					.newInstance();
+			transformerFactory = TransformerFactory.newInstance(TRANSFORMER_FACTORY_PROCESSOR_XALAN, XmlUtils.class.getClassLoader());
 			
 			// We've got our factory now, so set it back again!
 			if (originalSystemProperty == null) {
@@ -693,7 +688,6 @@ public class XmlUtils {
 	 * @param wmlTemplateString
 	 * @param mappings
 	 * @return
-	 * @see JaxbXmlPart.variableReplace which can invoke this more efficiently
 	 */
 	public static Object unmarshallFromTemplate(String wmlTemplateString, 
 			java.util.Map<String, ?> mappings) throws JAXBException {

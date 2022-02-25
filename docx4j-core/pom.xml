@@ -7,10 +7,11 @@
 	<artifactId>docx4j-parent</artifactId>
 	<version>${revision}</version>
   </parent>
-  
+
 	<artifactId>docx4j-core</artifactId>
 	<packaging>${packaging.type}</packaging>
 	<name>docx4j-core</name>
+	<version>11.3.2-SPIRIT</version>
 	
 	<description>
 		docx4j is a library which helps you to work with the Office Open
@@ -64,7 +65,7 @@
                     	<Manifest-Version>2.0</Manifest-Version>
                         <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Name>${project.artifactId}</Bundle-Name>
-                        <Bundle-Version>${project.version}</Bundle-Version>
+                        <Bundle-Version>${revision}</Bundle-Version>
                         <Import-Package>
                             com.topologi.diffx.event;resolution:=optional,
                             com.topologi.diffx.xml;resolution:=optional,
@@ -211,17 +212,17 @@
 		<dependency>
             <groupId>org.docx4j</groupId>
             <artifactId>docx4j-openxml-objects</artifactId>
-			<version>${project.version}</version>
+			<version>${revision}</version>
 		</dependency>
 		<dependency>
             <groupId>org.docx4j</groupId>
             <artifactId>docx4j-openxml-objects-pml</artifactId>
-			<version>${project.version}</version>
+			<version>${revision}</version>
 		</dependency>
 		<dependency>
             <groupId>org.docx4j</groupId>
             <artifactId>docx4j-openxml-objects-sml</artifactId>
-			<version>${project.version}</version>
+			<version>${revision}</version>
 		</dependency>
         
 		<dependency>
